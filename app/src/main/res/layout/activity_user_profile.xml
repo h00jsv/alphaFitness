@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecordWorkout">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="67dp"
+        android:layout_height="73dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@mipmap/ic_launcher"
+        android:contentDescription="@string/todo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="259dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:onClick="changeName"
+        android:text="@string/personName"
+        android:textSize="@dimen/h1"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.GridLayout xmlns:grid="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:padding="4dp"
+        grid:alignmentMode="alignBounds"
+        grid:columnCount="4"
+        grid:layout_constraintEnd_toEndOf="parent"
+        grid:layout_constraintStart_toStartOf="parent"
+        grid:layout_constraintTop_toBottomOf="@+id/imageView"
+        grid:rowOrderPreserved="false"
+        grid:useDefaultMargins="true">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Gender:"
+            android:textSize="15sp"
+            grid:layout_columnWeight="1"
+            grid:layout_gravity="fill_horizontal" />
+
+        <Button
+            android:id="@+id/buttonGender"
+            android:gravity="center"
+            android:text="choose"
+            grid:layout_columnWeight="1"
+            grid:layout_gravity="fill_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Weight:"
+            android:textSize="15sp"
+            grid:layout_columnWeight="1"
+            grid:layout_gravity="fill_horizontal" />
+
+        <Button
+            android:id="@+id/buttonWeight"
+            android:gravity="center"
+            android:text="choose"
+            grid:layout_columnWeight="1"
+            grid:layout_gravity="fill_horizontal" />
+
+    </android.support.v7.widget.GridLayout>
+
+    <ListView
+        android:id="@+id/profileDetailList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecordWorkout">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="259dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/record_workout_h1"
+        android:textSize="@dimen/h1"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="67dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@mipmap/ic_launcher"
+        android:onClick="openUserProfile"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="51dp"
+            tools:layout_editor_absoluteY="133dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:text="@string/distance"
+                android:textSize="@dimen/text"
+                tools:layout_editor_absoluteX="25dp"
+                tools:layout_editor_absoluteY="160dp" />
+
+            <TextView
+                android:id="@+id/tv_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:text="@string/distanceCounter"
+                android:textSize="@dimen/h2"
+                tools:layout_editor_absoluteX="46dp"
+                tools:layout_editor_absoluteY="203dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:text="@string/measurement"
+                android:textSize="@dimen/text"
+                tools:layout_editor_absoluteX="25dp"
+                tools:layout_editor_absoluteY="248dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/holo_blue_light" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="212dp"
+            tools:layout_editor_absoluteY="133dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:text="@string/duration"
+                android:textSize="@dimen/text"
+                tools:layout_editor_absoluteX="219dp"
+                tools:layout_editor_absoluteY="160dp" />
+
+            <TextView
+                android:id="@+id/tv_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:text="@string/durationCounter"
+                android:textSize="@dimen/h2"
+                tools:layout_editor_absoluteX="222dp"
+                tools:layout_editor_absoluteY="203dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="34dp"
+                android:text="@string/time"
+                android:textSize="@dimen/text"
+                tools:layout_editor_absoluteX="206dp"
+                tools:layout_editor_absoluteY="257dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="2dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+    </com.google.android.gms.maps.MapView>
+
+    <Button
+        android:id="@+id/button"
+        android:onClick="startStopWorkout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        android:text="start workout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
